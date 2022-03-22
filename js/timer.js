@@ -16,13 +16,17 @@ const updateClock = () => {
     const fHours = hours < 10 ? '0' + hours : hours
     const fMinutes = minutes < 10 ? '0' + minutes : minutes
     const fSeconds = seconds < 10 ? '0' + seconds : seconds
-    const fDays = days < 4 ? days + ' дня' : days + ' дней'
+    const fDays = days < 4 ? days + ' дня ' : days + ' дней '
 
-    timerBlock.textContent = `${fDays} ${fHours}:${fMinutes}:${fSeconds}`
+    timerBlock.textContent = `${fDays}${fHours}:${fMinutes}:${fSeconds}`
 
     if (timeRemaining <= 0 ) {
         clearInterval(interval)
         timerBlock.textContent = `00:00:00`
+    }
+    
+    if (days <= 0 ) {
+        const fDays = ''
     }
 }
 
