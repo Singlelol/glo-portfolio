@@ -25,6 +25,10 @@ const updateClock = () => {
         timerBlock.textContent = `00:00:00`
     }
     
+    if (days = 1 ) {
+        const fDays = days + ' день '
+    }
+    
     if (days <= 0 ) {
         const fDays = ''
     }
